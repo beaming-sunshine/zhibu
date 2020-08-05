@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>“智布”布匹瑕疵识别系统</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/md5.js"></script>
+	<link href="../static/css/main.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">“智布”</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+					<li><a href="main.html">主要功能</a></li>
+					<li><a href="set.html">阈值设置</a></li>
+					<li><a href="datas.html">数据集分析</a></li>
+					<li><a href="standard.html">识别标准</a></li>
+					<li><a href="statistics.html">结果可视化</a></li>
+					<li><a href="#footer">关于系统</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="text-center">布匹瑕疵识别系统<span class="glyphicon glyphicon-leaf"></span></h1>
+			<p class="text-center">本系统具有完善的功能，最基本的是选择图片上传并识别图片中布匹的瑕疵与布匹种类<br>同时还有阈值设置、数据集分析、识别标准、结果可视化等功能。</p>
+			<p class="text-center"><a class="btn btn-primary btn-lg" href="main.html" role="button">开始吧！</a></p>
+		</div>
+	</div>
+	<section id="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+					<div class="single-service" onclick="jump();">
+						<div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+							<img height="100" src="https://www.beamingsunshine.cn/image/icon/recognize2.png" alt="">
+						</div>
+						<h2>精准 · 识别瑕疵</h2>
+						<p>用户上传布匹样张后，正确识别出样张有无瑕疵，标出瑕疵的种类及其所在的位置。同时还能准确地识别布匹的种类。每进行一次识别，将该次识别的信息（包括识别的日期时间，识别结果，图片（如有需要））存进数据库中，方便后续进行数据分析。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+					<div class="single-service" onclick="jump();">
+						<div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+							<img height="100" src="https://www.beamingsunshine.cn/image/icon/shoudong.png" alt="">
+						</div>
+						<h2>反馈 · 手动标注</h2>
+						<p>若识别结果不准确，提供”人为矫正“的功能。让用户人为手动标出瑕疵名称和位置，并将图片和标注信息（包括瑕疵范围坐标，瑕疵种类）存进数据库中，便于后续模型的训练。</p>
+					</div>
+				</div>
+				<div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+					<div class="single-service" onclick="jump3();">
+						<div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+							<img height="100" src="https://www.beamingsunshine.cn/image/icon/set.png" alt="">
+						</div>
+						<h2>多维 · 设置阈值</h2>
+						<p>通过对瑕疵置信度、长、宽等规格限制，使置信度较低的或是太小的瑕疵不在识别结果中显示。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#services-->
+
+	<section id="action" class="responsive">
+		<div class="vertical-center">
+			<div class="container">
+				<div class="row">
+					<div class="action take-tour">
+						<div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+							<h1 class="title">“智布” 布匹瑕疵识别系统</h1>
+							<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp我是宇宙超级无敌可爱的小布，准备好开始了嘛？</p>
+						</div>
+						<div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+							<div class="tour-button">
+								<a href="main.html" class="btn btn-common">开始吧！</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#action-->
+
+	<section id="features">
+		<div class="container">
+			<div class="row">
+				<div class="single-features" onclick="jump1();">
+					<div class="col-sm-3 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms"  style="padding-top: 70px;padding-left: 100px;">
+						<img  src="https://www.beamingsunshine.cn/image/icon/standard.png" height="100" alt="">
+					</div>
+					<div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+						<h2>瑕疵识别标准</h2>
+						<P>瑕疵识别标准界面主要用于瑕疵标准的展示，针对赛题组要求识别的前20种瑕疵以及给出的样例参考，通过反复观察数据样本，选取其中具有代表性的图片，采用图集的形式，将瑕疵在图片中清晰标出，该界面则给出了我们制定的标注标准。</P>
+					</div>
+				</div>
+				<div class="single-features" onclick="jump4();">
+					<div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+						<h2>识别结果可视化</h2>
+						<P>识别结果可视化界面主要是对识别的结果进行数据统计，以天为单位对每天识别的结果进行统计，数据来源于数据库中。统计的主要内容分为瑕疵种类的频次和识别的正确率。</P>
+					</div>
+					<div class="col-sm-3 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms" style="padding-top: 70px;padding-left: 100px;">
+						<img src="https://www.beamingsunshine.cn/image/icon/data.png" height="100" alt="">
+					</div>
+				</div>
+				<div class="single-features" onclick="jump2();">
+					<div class="col-sm-3 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms" style="padding-top: 70px;padding-left: 100px;">
+						<img src="https://www.beamingsunshine.cn/image/icon/dataset.png" height="100" alt="">
+					</div>
+					<div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+						<h2>数据集分析</h2>
+						<P>针对赛题给出的布匹瑕疵数据集，我们进行了详尽的数据统计和分析，故我们将结果展示为一下三个方面：<br>
+							1.	统计数据集中布匹种类的分布情况<br>
+							2.	统计数据集中各种瑕疵的数量及分布情况<br>
+							3.	手动标定近四千张的瑕疵的数量及分布情况
+						</P>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#features-->
+	<section id="clients">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+						<p><img src="https://www.beamingsunshine.cn/image/icon/clients.png" class="img-responsive" alt=""></p>
+						<h1 class="title">智布</h1>
+						<p>你的布匹瑕疵识别必备系统。</p>
+					</div>
+					<div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client1.png" class="img-responsive" alt=""></a>
+						</div>
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client2.png" class="img-responsive" alt=""></a>
+						</div>
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client3.png" class="img-responsive" alt=""></a>
+						</div>
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client4.png" class="img-responsive" alt=""></a>
+						</div>
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client5.png" class="img-responsive" alt=""></a>
+						</div>
+						<div class="col-xs-3 col-sm-2">
+							<a href="#"><img src="images/home/client6.png" class="img-responsive" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--/#clients-->
+
+
+	<footer id="footer">
+		<p class="text-center footer">COPYRIGHT © zhibu 2019. ALL RIGHT RESERVED.</p>
+		<p class="text-center">MADE WITH <span class="glyphicon glyphicon-heart"></span> BY HHUC hjm</p>
+	</footer>
+	<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		function jump() {
+			window.location.href="main.html";
+		}
+		function jump1() {
+			window.location.href="standard.html";
+		}
+		function jump2() {
+			window.location.href="datas.html";
+		}
+		function jump3() {
+			window.location.href="set.html";
+		}
+		function jump4() {
+			window.location.href="statistics.html";
+		}
+	</script>
+</body>
+</html>

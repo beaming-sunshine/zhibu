@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>“智布”布匹瑕疵识别系统</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css"/>
+	<link href="../static/css/main.css" rel="stylesheet">
+	<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/md5.js"></script>
+</head>
+<body onload="onload()">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">“智布”</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">首页<span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="main.html">主要功能</a></li>
+					<li><a href="set.html">阈值设置</a></li>
+					<li><a href="datas.html">数据集分析</a></li>
+					<li><a href="standard.html">识别标准</a></li>
+					<li><a href="statistics.html">结果可视化</a></li>
+					<li><a href="#footer">关于系统</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	
+
+	<div class="main container">
+		<div class="page-header">
+			<h1>主要功能 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <small>通过选择本地图片，小布可以在页面中显示，还可以实时识别出布匹中的瑕疵哦。</small></h1>
+		</div>
+	</div>
+	<div class="button-group">
+		<div class="container">
+			<div class="row" id="button_group">
+				<div class="col-md-3 col-md-offset-2 col-xs-6">
+					<button type="button" class="btn btn-primary btn-lg" id="add"><span class="glyphicon glyphicon-folder-open"></span>  文件图片</button>
+					<input type="file" id="file_input" multiple/>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<button class="btn btn-primary btn-lg" id="send"><span class="glyphicon glyphicon-search"></span> 识别瑕疵</button>
+				</div>
+				<div class="col-md-3 col-xs-6">
+					<button class="btn btn-primary btn-lg" id="recognize"><span class="glyphicon glyphicon-search"></span> 识别种类</button>
+				</div>
+				<div class="col-md-3 col-xs-6">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="selectImgDiv" style=" min-height: 300px;">
+		<div class="container" id="show">
+
+		</div>
+	</div>
+
+	<footer id="footer">
+		<p class="text-center footer">COPYRIGHT © zhibu 2019. ALL RIGHT RESERVED.</p>
+		<p class="text-center">MADE WITH <span class="
+			glyphicon glyphicon-heart"></span> BY HHUC hjm</p>
+		</footer>
+		<script type="text/javascript" src="../static/js/selectImg.js"></script>
+		<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+	</body>
+	</html>
